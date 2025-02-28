@@ -242,7 +242,7 @@
     <br>
     <br>
     <!-- Portfolio Section -->
-    <div class="" data-aos="fade-up" style="text-align: center; margin-bottom: 30px;">
+    <div class="certificate-container" data-aos="fade-up" style="text-align: center; margin-bottom: 30px;">
       <h2 style="font-weight:bold;">Certificate</h2>
       <div style="width: 50px; height: 2px; background-color: #007bff; margin: auto;"></div>
     </div>
@@ -278,44 +278,56 @@
   <br>
   <br>
   <br>
+
 <style>
-  /* Limit the certificate image size */
+ /* Responsive Certificate Image */
 .certificate-img {
-  max-width: 1000px; /* Adjust as needed */
-  max-height: 600px; /* Adjust as needed */
-  width: auto;
-  height: auto;
-  border: 2px solid #000; /*black border */
+  max-width: 100%; /* Ensure it fits inside the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Adjust max height */
+  object-fit: contain; /* Prevents cropping */
+  border: 2px solid #000; /* Black border */
 }
 
-/* Style for the carousel buttons */
-
-/* Make the carousel buttons put in the center both sides */
+/* Responsive Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
 
-
+/* Styling for Carousel Buttons */
 .custom-carousel-btn {
-  background-color: #fff9f9dc !important; /* background */
-  border: none; /* Remove default border if any */
-  width: 50px; 
+  background-color: #fff9f9dc !important;
+  border: none;
+  width: 50px;
   height: 50px;
-  opacity: 0.8; /* Slight transparency; adjust as you like */
+  opacity: 0.8;
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
 
-/* Make the icon inside the button white for contrast */
+/* White Icons for Contrast */
 .custom-carousel-btn .carousel-control-prev-icon,
 .custom-carousel-btn .carousel-control-next-icon {
   filter: invert(1);
-  width: 30px;  
+  width: 30px;
   height: 30px;
 }
-</style>       
+
+/* Make It Fully Responsive */
+@media (max-width: 768px) {
+  .certificate-img {
+    max-height: 250px; /* Reduce size on small screens */
+  }
+
+  .custom-carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+</style>  
 
 <br>
           <!-- Contact Section -->
@@ -331,7 +343,48 @@
 <br>
 <br>
 <br>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31541.525784740945!2d125.58119192036203!3d8.815097848091547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301e7d64ec6068f%3A0x6c2094b32fb74025!2sMaguinda%2C%20Butuan%20City%2C%20Agusan%20Del%20Norte!5e0!3m2!1sen!2sph!4v1740638831995!5m2!1sen!2sph" frameborder="0" style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="map-container">
+  <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31541.525784740945!2d125.58119192036203!3d8.815097848091547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301e7d64ec6068f%3A0x6c2094b32fb74025!2sMaguinda%2C%20Butuan%20City%2C%20Agusan%20Del%20Norte!5e0!3m2!1sen!2sph!4v1740638831995!5m2!1sen!2sph" 
+      frameborder="0" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<style>
+/* Map Container */
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Para di kaayo dako sa lapad na screen */
+  height: 400px; /* Default height */
+  margin: auto;
+  overflow: hidden; /* Para di mupilit gawas */
+}
+
+/* Make iframe responsive */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000; /* Optional black border */
+  border-radius: 10px; /* Optional rounded edges */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .map-container {
+      height: 300px; /* Gamay sa tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+      height: 250px; /* Gamay sa mobile */
+  }
+}
+</style>
 <br>
 <br>
 <br>
